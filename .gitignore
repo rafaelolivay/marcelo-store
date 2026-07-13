@@ -1,0 +1,35 @@
+# Agentes / herramientas locales
+.claude/*
+# ...pero versionamos el ejemplo como referencia para clonar:
+!.claude/settings.example.json
+
+# Dependencias
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+
+# Build de Next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# Deploy en Vercel
+.vercel
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Variables de entorno / secretos
+.env
+.env.*
+!.env.example
+
+# Sistema
+.DS_Store
+*.pem

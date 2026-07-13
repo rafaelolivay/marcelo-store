@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Read(~/.ssh/**)",
+      "Edit(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Edit(~/.aws/**)",
+      "Read(~/.gnupg/**)",
+      "Edit(~/.gnupg/**)",
+      "Read(~/.bashrc)",
+      "Edit(~/.bashrc)",
+      "Read(~/.zshrc)",
+      "Edit(~/.zshrc)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Edit(.env)",
+      "Edit(.env.*)"
+    ],
+    "allow": ["Bash(git branch:*)", "Bash(git checkout:*)", "Bash(git switch:*)", "Bash(git status:*)", "Bash(git diff:*)"],
+    "additionalDirectories": []
+  },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": false,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "filesystem": {
+      "denyRead": [
+        "~/.ssh/**",
+        "~/.aws/**",
+        "~/.gnupg/**",
+        "~/.bashrc",
+        "~/.zshrc",
+        ".env",
+        ".env.*"
+      ]
+    }
+  }
+}
