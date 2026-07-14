@@ -1,6 +1,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --badge-bg: #111827;
+  --badge-fg: #ffffff;
+  --max-width: 1100px;
 }
 
 * {
@@ -28,12 +33,96 @@ body {
 }
 
 .main {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+.hero {
+  padding: 1.5rem 0 2rem;
   text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  letter-spacing: -0.02em;
+}
+
+.aviso {
+  margin: 2rem auto;
+  max-width: 32rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.seccion {
+  margin-top: 2.5rem;
+}
+
+.seccion__titulo {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.card__img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f3f4f6;
+}
+
+.card__img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #f3f4f6,
+    #f3f4f6 10px,
+    #e9eaec 10px,
+    #e9eaec 20px
+  );
+}
+
+.card--agotado .card__img {
+  opacity: 0.6;
+}
+
+.badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--badge-fg);
+  background: var(--badge-bg);
+  border-radius: 4px;
+}
+
+.card__nombre {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.card__precio {
+  font-size: 0.95rem;
+  color: var(--muted);
 }

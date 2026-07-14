@@ -23,11 +23,15 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      # Los 2 checks van separados. `if: always()` hace que corran ambos aunque
+      # Los checks van separados. `if: always()` hace que corran todos aunque
       # uno falle, para ver todas las fallas en una sola corrida; igual cada
       # falla marca el job como fallido.
       - name: Lint (next lint)
         run: npm run lint
+
+      - name: Tests (vitest)
+        if: ${{ always() }}
+        run: npm test
 
       - name: Build (next build)
         if: ${{ always() }}

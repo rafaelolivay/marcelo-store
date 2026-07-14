@@ -1,0 +1,7 @@
+id,nombre,categoria,precio,imagen_url,disponible,destacado
+REM-001,Remera Blanca Básica,Remeras,8500,https://example.com/remera-blanca.jpg,Sí,Sí
+REM-002,Remera Negra Básica,Remeras,8500,https://example.com/remera-negra.jpg,No,No
+PAN-001,Jean Slim Azul,Pantalones,22000,https://example.com/jean-slim.jpg,Sí,Sí
+PAN-002,Jogger Gris,Pantalones,19000,https://example.com/jogger-gris.jpg,Sí,No
+BUZ-001,Buzo Canguro Verde,Buzos,18000,https://example.com/buzo-verde.jpg,Sí,No
+CAM-001,Campera Inflable,Camperas,45000,https://example.com/campera-inflable.jpg,No,Sí

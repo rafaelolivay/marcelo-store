@@ -19,6 +19,13 @@ next-env.d.ts
 # Deploy en Vercel
 .vercel
 
+# Playwright (artefactos de corrida; los screenshots de evidencia van
+# versionados aparte en docs/backlog/evidence/)
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
