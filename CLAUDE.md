@@ -1,11 +1,11 @@
 # CLAUDE.md — marcelo-store
 
-@../../ops/docs/CLAUDE-shared.md
+@../../core/ops/docs/CLAUDE-shared.md
 
 ## Específico de este repo
 
 Proyecto de cliente (práctica) — NO es housekeeping de tooling interno.
-Aplica DEFINITION_OF_DONE.md completo (ver ../../ops/DEFINITION_OF_DONE.md)
+Aplica DEFINITION_OF_DONE.md completo (ver ../../core/ops/DEFINITION_OF_DONE.md)
 en cada ticket de feature, no el cierre liviano que usan ops/traza/posta/ancla.
 
 Stack: Next.js, deploy en Vercel.
